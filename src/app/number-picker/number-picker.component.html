@@ -1,0 +1,9 @@
+<div class="number-picker-container">
+  <div [ngClass]="getClassName()">
+    <span class="minus" (click)="onMinusClick()"></span>
+    <div>
+      <input [value]="number">
+    </div>
+    <span class="add" (click)="onAddClick()"></span>
+  </div>
+</div>

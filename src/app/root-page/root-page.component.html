@@ -1,0 +1,7 @@
+<div class="container">
+  <mod-address [(mode)]="mode" (eventEmmiter)="eventFromAddress($event)"></mod-address>
+  <user-center *ngIf="showUserCenter()"></user-center>
+  <mod-edit *ngIf="showEdit()" [(itemArr)]="toBuyList" [(mode)]="mode" (eventEmitter)="eventFromEdit($event)"></mod-edit>
+  <mod-recommend [(toBuyList)]="toBuyList"></mod-recommend>
+  <mod-add (eventEmmiter)="eventFromModAdd($event)" [(data)]="cModToBuy" *ngIf="showModAddPanel()"></mod-add>
+</div>

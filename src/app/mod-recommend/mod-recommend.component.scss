@@ -1,0 +1,65 @@
+.mod-recommend-container{
+    .container{
+        position: relative;
+        overflow: hidden;
+        margin: 15px 0;
+        padding-bottom: 70px;
+    }
+
+    .title{
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .title span{
+        padding: 0 10px 0 30px;
+        background: #e8e8ed url("../../assets/imgs/dengpao.png") no-repeat 12px 0;
+        background-size: 11px;
+    }
+
+    .title::after {
+        content: "";
+        height: 0;
+        display: block;
+        border-bottom: 1px solid #e5e5e5;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        right: -100%;
+        bottom: -100%;
+        border-color: #333;
+        top: 50%;
+        left: 17.3%;
+        right: 17.3%;
+        z-index: -1;
+    }
+
+    ul{
+        padding: 0 20px 0 10px;
+        overflow: hidden;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        position: relative;
+        width: 50%;
+        padding-bottom: 12px;
+        background: #fff;
+    }
+
+    li:not(:first-child):not(:nth-child(2)) {
+        margin-top: 10px;
+    }
+
+    li:nth-child(2n) {
+        float: right;
+        margin-right: -10px;
+    }
+}

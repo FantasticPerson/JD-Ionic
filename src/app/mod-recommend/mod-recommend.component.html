@@ -1,0 +1,12 @@
+<div class="mod-recommend-container">
+  <div class="container">
+    <div class="title">
+      <span>你可能还想要</span>
+    </div>
+    <ul class="list">
+      <li *ngFor="let item of itemArr;let index=i">
+        <mod-item [(weight)]="item.weight" [(describe)]="item.describe" [(price)]="item.price" [(imgSrc)]="item.imgSrc" [(choices)]="item.choices"></mod-item>
+      </li>
+    </ul>
+  </div>
+</div>

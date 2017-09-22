@@ -1,0 +1,115 @@
+.number-picker-container{
+    .container{
+        position: relative;
+        display: block;
+        width: 100px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .container span{
+        position: relative;
+        float: left;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .add::before,
+    .minus::before{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        content: "\20";
+        display: block;
+        width: 16px;
+        height: 2px;
+        margin: -1px 0 0 -8px;
+        background: #666;
+        border-radius: 1px;
+    }
+
+    .add{
+        float: right;
+    }
+
+    .container::before,
+    .add::before{
+        width: 2px;
+        height: 16px;
+        margin: -8px 0 0 -1px;
+        border-radius: 1px;
+    }
+
+    .container div{
+        float: left;
+        position: relative;
+    }
+
+    .container div::before{
+        border-color: #ccc;
+        z-index: 1;
+    }
+
+    .container input{
+        border:none;
+        -webkit-appearance: none;
+        border-radius: 0;
+        width: 40px;
+        height: 30px;
+        line-height: normal;
+        border-left: 0;
+        border-right: 0;
+        font-size: 12px;
+        background: #fff;
+        text-align: center;
+        position: relative;
+        float: left;
+    }
+
+    .minus::after,
+    .add::after{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        content: "\20";
+        display: block;
+        width: 16px;
+        height: 2px;
+        margin: -1px 0 0 -8px;
+        background: #666;
+        border-radius: 1px;
+    }
+
+    .disable::before,
+    .disable:after{
+        background: #ccc;
+    }
+
+    .withBorder .minus{
+        background: #f3f2f8;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-color: #ccc;
+        border: 1px solid #e5e5e5;
+    }
+
+    .withBorder .add{
+        background: #f3f2f8;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-color: #ccc;    
+        border: 1px solid #e5e5e5;
+    }
+    .withBorder input{
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .white .add,
+    .white .minus{
+        background: #FFFFFF;
+    }
+}

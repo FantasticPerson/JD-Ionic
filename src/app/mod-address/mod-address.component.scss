@@ -1,0 +1,60 @@
+.mode-address-container{
+    .container{
+        position: relative;
+        height: 45px;
+        margin-bottom: 0px;
+    }
+
+    .address-bar{
+        overflow: hidden;
+        position: relative;
+        padding: 0 10px;
+        height: 45px;
+        margin-bottom: -1px;
+        line-height: 45px;
+        font-size: 16px;
+        background: #f2f2f7;
+    }
+
+    .location{
+        position: relative;
+        display: inline-block;
+        color: #666;
+        max-width: 30%;
+        margin-right: 20px;
+        white-space: nowrap;
+        overflow: visible;
+        font-size: 14px;
+    }
+
+    .location::before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 15px;
+        margin-top: -2px;
+        margin-right: 5px;
+        background: url("../../assets/imgs/location.png");
+        background-size: 16px 15px!important;
+    }
+
+    em{
+        font-style: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .edit,
+    .share{
+        float: right;
+        padding-left: 10px;
+        font-size: 14px;
+        color: #3985ff;
+    }
+}
+

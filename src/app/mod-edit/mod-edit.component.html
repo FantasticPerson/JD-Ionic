@@ -1,0 +1,50 @@
+<div class="mod-edit-container">
+  <div class="container">
+    <div class="section">
+      <div class="head_wrap">
+        <div class="shopHead">
+          <i [ngClass]="getAllSelectedClass()" (click)="clickSelectAll()"></i>
+          <i class="icon_jd"></i>
+          <span class="title">京东自营</span>
+        </div>
+      </div>
+      <div class="head_wrap">
+        <div class="head_notice">
+          <div class="title">商品满99元（20kg内）免运费，已选商品总重3.160kg，还差54.20元可免运费<i class="notice1"></i></div>
+          <span class="btn">凑单免运费</span>
+        </div>        
+      </div>
+      <div class="goods_car">
+        <div class="goods_item" *ngFor="let item of itemArr">
+          <div class="goods_item_container">
+            <i [ngClass]="getItemPickedClass(item)" (click)="itemChooseClick($event,item)"></i>
+            <span class="img_container">
+              <img [src]="getImgSrc(item)">
+            </span>
+            <div class="item_content">
+              <div class="item_content_name">{{item.describe}}</div>
+              <p class="sku">规格：自然清香</p>
+              <p class="price">￥{{item.price}}</p>
+              <div class="add_more">
+                <number-picker [(number)]="item.number" (eventEmitter)="numberChange($event,item)" [(className2)]="addClass"></number-picker>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fixBar">
+      <i [ngClass]="getAllSelectedClass()" (click)="clickSelectAll()">全选</i>
+      <div class="total" *ngIf="show('total')">
+        <p>总计：<strong>￥{{getTotalPrice()}}</strong>
+          <small>(不含运费，已优惠￥0.00)</small>
+        </p>
+        <span>去结算({{getModNumber()}}件)</span>
+      </div>
+      <div class="btns" *ngIf="show('btns')">
+        <span class="btn_2">移至收藏</span>
+        <span class="btn_3" (click)="delete()">删除</span>
+      </div>
+    </div>
+  </div>
+</div>
